@@ -1,5 +1,10 @@
 # store
 
+Les membres du groupe sont :
+-Fouad MOUTAIROU
+-Keryl DJEUKOUA
+-Meriack YEDJI
+
 A new Flutter project.
 
 ## Getting Started

@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:store/screens/cart_screen.dart'; // Importer l'écran du panier
 
 class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
-  const AppbarWidget({super.key});
+  const AppbarWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      /*
-        title : text ou une icone ou une image 
-        centerTitile : centrer le titre  
-        leading : regroupement de widget à gauche de la barre de navigation 
-        actions : regroupement de widget à gauche de la barre de navigation 
-      */
       title: const Text(
         'Store',
         style: TextStyle(
@@ -23,17 +19,12 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           onPressed: () {
-            /*
-            débogage : 
-            print : affichage de données simpltes 
-            inspect : affichage de donénes complexes
-          */
-            print('on pressed');
+            // Ouvrir l'écran du panier lorsque l'utilisateur clique sur l'icône du panier
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CartScreen()),
+            );
           },
-          icon: const Icon(Icons.person),
-        ),
-        IconButton(
-          onPressed: () {},
           icon: const Icon(Icons.shopping_cart_checkout_sharp),
         ),
       ],
@@ -42,6 +33,5 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(55);
 }

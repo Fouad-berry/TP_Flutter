@@ -9,13 +9,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /*
-      Scaffold permet l'architecturer l'application 
-      body : définir le contenu ppl de l'écran 
-      Appbar : barre de navigation 
-      Drawer : menu coulissant 
-      FloatingButton : bouton flottant ...
-    */
     return Scaffold(
       appBar: const AppbarWidget(),
       drawer: const DrawerWidget(),

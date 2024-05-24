@@ -11,7 +11,7 @@ class CategoriesService {
       List data = jsonDecode(response.body);
       return data.map((category) => Category.fromJson(category)).toList();
     } else {
-      throw Exception('Failed to load categories');
+      throw Exception('Echec de chargeemnt des categories');
     }
   }
 }

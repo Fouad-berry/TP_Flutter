@@ -20,7 +20,7 @@ class AdsWidget extends StatefulWidget {
   final List<Map> _items = [
     {'img': 'ad1.jpeg', 'text': 'Ordinateur et tablettes '},
     {'img': 'ad2.jpeg', 'text': 'Iphone 12 mini jusqu-a -30%'},
-    {'img': 'ad3.jpeg', 'text': 'Text3'},
+    {'img': 'ad3.jpeg', 'text': 'Ecran TV '},
   ];
 
   // idnice

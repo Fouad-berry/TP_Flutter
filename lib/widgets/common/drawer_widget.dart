@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:store/models/categories.dart';
+import 'package:store/providers/category_provider.dart';
+import 'package:store/screens/category_product_screen.dart';
 import 'package:store/services/categories_service.dart';
+import 'package:store/utils/category_icons.dart.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -30,7 +34,8 @@ class DrawerWidget extends StatelessWidget {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Center(child: CircularProgressIndicator());
                   } else if (snapshot.hasError) {
-                    return const Center(child: Text('Error loading categories'));
+                    return const Center(
+                        child: Text('Error loading categories'));
                   } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
                     return const Center(child: Text('No categories found'));
                   } else {
@@ -40,8 +45,19 @@ class DrawerWidget extends StatelessWidget {
                       itemBuilder: (context, index) {
                         final category = categories[index];
                         return ListTile(
-                          leading: const Icon(Icons.category),
+                          leading: Icon(
+                              categoryIcons[category.name] ?? Icons.category),
                           title: Text(category.name),
+                          onTap: () {
+                            Provider.of<CategoryProvider>(context,
+                                    listen: false)
+                                .category = category.name;
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ProductsScreen()),
+                            );
+                          },
                         );
                       },
                     );

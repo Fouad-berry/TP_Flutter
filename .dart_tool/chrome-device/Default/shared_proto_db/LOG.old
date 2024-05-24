@@ -1,0 +1,7 @@
+2024/05/23-14:52:14.768 3a20 Reusing MANIFEST C:\Users\fidri\AppData\Local\Temp\flutter_tools.d31c3075\flutter_tools_chrome_device.15dc690b\Default\shared_proto_db/MANIFEST-000001
+2024/05/23-14:52:14.771 3a20 Recovering log #3
+2024/05/23-14:52:14.773 3a20 (ignoring error) C:\Users\fidri\AppData\Local\Temp\flutter_tools.d31c3075\flutter_tools_chrome_device.15dc690b\Default\shared_proto_db/000003.log: dropping 247 bytes; Corruption: partial record without end(1)
+2024/05/23-14:52:14.774 3a20 Reusing old log C:\Users\fidri\AppData\Local\Temp\flutter_tools.d31c3075\flutter_tools_chrome_device.15dc690b\Default\shared_proto_db/000003.log 
+2024/05/23-14:52:25.878 3074 Level-0 table #5: started
+2024/05/23-14:52:25.884 3074 Level-0 table #5: 133726 bytes OK
+2024/05/23-14:52:25.886 3074 Delete type=0 #3

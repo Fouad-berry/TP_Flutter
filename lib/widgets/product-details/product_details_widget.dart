@@ -11,6 +11,14 @@ class ProductDetailsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Product? product = context.watch<ProductProvider>().product;
 
+    void _showSnackbar(BuildContext context) {
+      final snackBar = SnackBar(
+        content: Text('${product!.title} a été ajouté au panier!'),
+        duration: const Duration(seconds: 2),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
+
     return Column(
       children: [
         Container(
@@ -50,6 +58,7 @@ class ProductDetailsWidget extends StatelessWidget {
           onPressed: () {
             Provider.of<CartProvider>(context, listen: false)
                 .addToCart(product);
+            _showSnackbar(context);
           },
           child: const Text('Add to Cart'),
         ),

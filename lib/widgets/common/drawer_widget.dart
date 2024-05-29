@@ -4,7 +4,7 @@ import 'package:store/models/categories.dart';
 import 'package:store/providers/category_provider.dart';
 import 'package:store/screens/category_product_screen.dart';
 import 'package:store/services/categories_service.dart';
-import 'package:store/utils/category_icons.dart.dart';
+import 'package:store/utils/category_icons.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});

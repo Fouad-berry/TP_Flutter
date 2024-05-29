@@ -3,7 +3,8 @@ Les membres du groupe sont :
 <li>Fouad MOUTAIROU</li>
 <li>Keryl DJEUKOUA</li>
 <li>Meriack YEDJI</li>
-A new Flutter project.
+
+Tp de Flutter 
 
 ## Getting Started
 

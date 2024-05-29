@@ -4,7 +4,6 @@ Les membres du groupe sont :
 <li>Keryl DJEUKOUA</li>
 <li>Meriack YEDJI</li>
 
-Tp de Flutter 
 
 ## Getting Started
 
